@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+  }
+
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  aside {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  aside h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #bf4342; /* Синий акцент */
+  }
+  
+  aside nav a {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  aside nav a:hover {
+    background-color: #e7d7c1;
+    color: #bf4342;
+  }
+  
+  aside nav a.logout {
+    color: #dc2626;
+    margin-top: 40px;
+    font-weight: 500;
+  }
+
+  aside nav a.logout:hover {
+    color: #ffffff;
+    background-color: #e9a0a0;
+  }
+
+  main {
+    flex: 1;
+    padding: 40px;
+    background-color: #f9fafb;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+
+  .filters select,
+  .filters input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    margin: 0 0 5px;
+  }
+
+  .card p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #666;
+  }
+
+  .tags {
+    margin: 10px 0;
+  }
+
+  .tags span {
+    background-color: #f3f4f6;
+    color: #333;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-right: 6px;
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .card.resume-card {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card.resume-card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .card.resume-card h2 {
+    margin-bottom: 20px;
+  }
+  
+  .responses-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .responses-table th,
+  .responses-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+    font-size: 15px;
+  }
+  
+  .responses-table th {
+    background-color: #f3f4f6;
+    color: #374151;
+  }
+  
+  .responses-table tbody tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    background-color: #bf4342;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #8c1c13;
+  }
+
+  .vacancy-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .vacancy-form label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .vacancy-form input,
+  .vacancy-form textarea {
+    margin-top: 8px;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    resize: vertical;
+  }
+  
+  .vacancy-form input:focus,
+  .vacancy-form textarea:focus {
+    outline: none;
+    border-color: #8c1c13;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  }
+  
+  .vacancy-form .btn {
+    background-color: #bf4342;
+    color: white;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+  }
+  
+  .vacancy-form .btn:hover {
+    background-color: #735751;
+  }
+  
+  .filters .btnn {
+    background-color: #bf4342;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+  }
+  
+  .filters input{
+    height: 25px;
+  }
+
+  
+
+/* Стили для карточки резюме */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Стили для групп элементов формы */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Стили для заголовков */
+h1, h2 {
+  color: #333;
+}
+
+/* Стили для меток */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"], textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box; /* Обеспечивает правильное отображение ширины */
+}
